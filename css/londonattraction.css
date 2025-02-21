@@ -1,0 +1,651 @@
+/* .container{
+background-color: aqua;
+height: 1000px;
+display: grid;
+width: 80%; /* Adjust the container width to 80% of the page width 
+margin: 0 auto; /* Centers the container horizontally 
+padding: 10px; Adds padding inside the container
+/* box-shadow: 0 4px 8px rgba(166, 29, 29, 0.1); Adds a subtle shadow 
+grid-template-columns: 50px,50px,50px;
+grid-template-rows: 50px,50px,50px;
+}
+.header{
+  background-color: blueviolet;
+  width: 1000px;
+  height: 90px;
+  column-gap: 10px;
+  row-gap: 10px;
+
+}
+.Item1{
+  height: 400px;
+  width: 400px;
+  background-color: blue;
+
+} */
+ /* Reset default styling */
+
+ 
+
+ html, body {
+  height: 100%;  /* Make sure the body takes up the full height of the page */
+  display: flex;
+  flex-direction: column;  /* Stack content vertically */
+  margin: 0;
+  flex-direction: column;  /* Stack content vertically */
+}
+
+/* body {
+  display: flex;
+  flex-direction: column;  /* Stack content vertically */
+  /* margin: 0; */
+  /* padding-top: 80px; */
+/* } */ */
+/* .content {
+  flex: 1;  /* This allows the content to grow and push the footer down */
+  /* padding: 20px; */
+/* } */ */
+
+
+* {
+  margin: 0;
+  padding: 30;
+  box-sizing: border-box; 
+}
+.logo{
+  display: grid;
+   height: 8px;
+  width: 8px;
+}
+
+/*  below header */
+/* body {
+  font-family: Arial, sans-serif;
+  background-color:red;
+  color:red;
+  transition: background-color 0.3s, color 0.3s;
+} */
+/* navigation bar */
+nav {
+  background-color: white;
+  color: #ddd;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: left;
+  background: linear-gradient(45deg, #ff6f61, #6a5acd, #00bcd4);
+  padding: -10px -20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adding shadow */
+  z-index: 1000; /* Ensures the navbar stays on top */
+}
+h1{
+  background-color:white;
+  /* padding: 10px; */
+  margin-top: -30px;
+  background: linear-gradient(45deg, white, white, white);
+    padding: -10px -20px;
+    position: sticky;
+    display:flexbox;
+    width: 100%;
+ 
+}
+h2{
+  font-size: large;
+  font-display: bold;
+  padding-top: 10px;
+  margin-bottom: 10px;
+  background-color:white;
+  text-align: center;
+}
+ /* p{
+  background-color:greenyellow;
+}  */
+
+nav ul {
+  list-style: none;
+  display: inline-block;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 15px;
+}
+/* navigation bar elemnts */
+nav ul li a {
+  color:black;
+  text-decoration: none;
+  font-size: large;
+}
+
+nav ul li a:hover {
+  text-decoration:underline;
+}
+/* Explore london attraction General section styles */
+section.attractions {
+  /* padding: 5px; */
+  margin-top: 10px;
+  text-align: center;
+  font-style: initial;
+  text-decoration:#ddd;
+  background-color:white;
+}
+
+/* Grid layout for the attractions */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Dynamic number of columns */
+  gap: 20px; /* Space between grid items */
+  justify-items: center; /* Center content in each grid cell */
+  background-color:white;
+}
+
+/* Styles for each grid item */
+.grid-item {
+  border: 2px solid black;
+  border-radius: 8px;
+  overflow: hidden; /* Prevent image overflow */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  padding: 20px;
+  
+  
+}
+
+/* Style the images to make them fit the container */
+.grid-item img {
+  width: 100%;
+  height: 180px;
+  display: flexbox;
+  
+}
+
+/* Style the text under each image */
+.grid-item p {
+  margin: 10px 0;
+  font-size: 1.2rem;
+  font-weight: bold;
+  background-color:yellow;
+}
+
+/* Hover effect to scale up the grid items */
+.grid-item:hover {
+  transform: scale(1.05);
+}
+
+/* Optional: add hover effect to images */
+.grid-item a {
+  text-decoration: burlywood; /* Remove underline */
+  color: inherit; /* Inherit color from parent */
+   background-color:#ddd;
+}
+
+.grid-item a:hover {
+  color:slateblue; /* Change text color on hover */
+}
+
+button {
+  padding: 1px;
+  background-color:#28a745;
+  color: white;
+  border: white;
+  cursor: pointer;
+  
+}
+
+button:hover {
+  background-color: #555;
+}
+
+body.dark-mode {
+  background-color: #333;
+  color: white;
+}
+
+header {
+  background-color: white;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2rem;
+}
+.Popular-attraction{
+ color: forestgreen;
+place-items: center;
+
+  
+}
+
+header p {
+  font-size: 1.4rem;
+  background-color:white;
+  padding: -20px;
+  display: grid;
+  text-align: center;
+  color:#121212;
+}
+
+.content, .contact-form {
+  padding: 50px;
+  text-align: center;
+}
+
+/* .gallery {
+  display:flexbox;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  font: Red;
+} */
+
+/* .gallery img {
+  width: 50%;
+  height: 10px;
+  border-radius: 5px;
+} */
+
+/* footer  
+{
+  background-color:yellow;
+  color: green;
+  text-align: center;
+  padding: 40px 0;
+  
+  display: grid;
+} */
+
+/* Default styles */
+body {
+  background-color: white;
+  color: black;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Dark Mode styles */
+body.dark-mode {
+  background-color: #121212;
+  color:white;
+}
+
+/* button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  background-color:white;
+  color: white;
+  border-radius: 5px;
+} */
+
+/* button:hover {
+  background-color: red;
+} */
+
+/*about-page-css*/
+
+
+
+/* General Body and Container Styling */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 90%;
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+  color: #333;
+  text-align: center;
+}
+
+/* Form Styling */
+form {
+  display: grid;
+  gap: 15px;
+}
+
+/* Form Labels */
+label {
+  font-size: 16px;
+  color: #333;
+}
+
+/* Input and Select Fields */
+input[type="text"], input[type="email"], input[type="tel"], input[type="date"], select, textarea {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+/* Textarea specific styles */
+textarea {
+  resize: vertical;
+}
+
+/* Button Styling */
+button {
+  background-color: #007bff;
+  color: white;
+  padding: 14px;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  /* width: 5%; */
+}
+
+/* Button Hover Effect */
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Success Message Styling */
+#form-message {
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  color: #28a745;
+  margin-top: 20px;
+}
+
+/* Styling for Select "Other" Option */
+#other-label, #other-attraction {
+  display: none;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .container {
+      width: 100%;
+      margin: 20px;
+      padding: 15px;
+  }
+
+  button {
+      font-size: 18px;
+  }
+
+  input[type="text"], input[type="email"], input[type="tel"], input[type="date"], select, textarea {
+      font-size: 14px;
+      padding: 10px;
+  }
+
+  label {
+      font-size: 14px;
+  }
+}
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+/* Container for the gallery page */
+/* .container {
+  width: 50%;
+  max-width: 100px;
+  margin: 50px auto;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Dynamic number of columns */
+  /* gap: 20px; Space between grid items */
+  /* justify-items: center; Center content in each grid cell
+  background-color:#ddd;
+} */ 
+
+/* Gallery Header */
+#gallery h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+#gallery p {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+/* Gallery Grid Layout */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Flexible columns */
+  grid-template-rows: repeat(auto-fill, minmax(1fr, 1fr)); /* Flexible rows */
+  gap: 20px;
+  margin-top: 20px;
+}
+
+
+/* Gallery Item */
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+/* .gallery-item img {
+  width: 50%;
+  height: 100px;
+  display: block;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+} */
+.gallery-item img {
+  width: 30%; /* Make image fill the container */
+  height: 200px; /* Set fixed height for consistency */
+  object-fit: cover; /* Ensure image scales nicely within the container */
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flexbox;
+}
+
+/* Hover effect on images */
+.gallery-item:hover img {
+  transform: scale(1.1); /* Slight zoom effect */
+}
+
+/* Overlay for Book Now Button */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.3s ease;
+  border-radius: 8px;
+}
+
+.gallery-item:hover .overlay {
+  opacity: 1;
+}
+
+/* Button in Overlay */
+.btn {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  text-decoration: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Button Hover Effect */
+.btn:hover {
+  background-color: #0056b3;
+}
+
+/* Footer Styling */
+footer {
+  text-align: center;
+  background-color: #333;
+  color: white;
+  padding: 10px 0;
+  margin-top: 40px;
+} 
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px)
+{
+  #gallery h1 {
+      font-size: 2rem;
+  }
+}
+
+  .gallery-grid {
+      grid-template-columns: 1fr; /* One column layout on small screens */
+  }
+
+ .btn {
+      font-size: 14px;
+  }
+  body.dark-mode {
+    background-color: #121212;
+    color:red;
+}
+
+/* Ticket Price Section Styles */
+.ticket-price-section {
+  text-align: center;
+}
+
+.ticket-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsive grid */
+  gap: 20px;
+  justify-items: center;
+}
+
+.ticket-item {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  padding: 20px;
+  transition: transform 0.3s ease;
+}
+
+.ticket-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.ticket-item h3 {
+  margin: 15px 0;
+  font-size: 1.5rem;
+}
+
+.ticket-item p {
+  margin: 10px 0;
+  color: #555;
+}
+
+.ticket-item button {
+  padding: 10px 20px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.ticket-item button:hover {
+  background-color: #555;
+}
+
+/* Hover Effect on Grid Item */
+.ticket-item:hover {
+  transform: scale(1.05);
+}
+@media (max-width: 768px) {
+  .ticket-container {
+      grid-template-columns: 1fr; /* Stack items on small screens */
+  }
+}
+/* Basic styling for the form */
+#bookingForm {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  margin: 0 auto;
+}
+
+#bookingForm label {
+  font-size: 1.1rem;
+  margin-top: 10px;
+  display: block;
+}
+
+#bookingForm input[type="text"], 
+#bookingForm input[type="email"], 
+#bookingForm input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+#bookingForm input[type="submit"] {
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#bookingForm input[type="submit"]:hover {
+  background-color: #555;
+}
+
+/* Styling for the confirmation message */
+#confirmationMessage {
+  background-color: #e4f7e7;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+  width: 80%;
+  margin: 20px auto;
+}
+
+#confirmationMessage h2 {
+  color: #28a745;
+}
+
+#confirmationMessage p {
+  font-size: 1.2rem;
+}

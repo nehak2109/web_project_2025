@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>London Attractions</title>
+    <link rel="stylesheet" href="css/londonattraction.css">
+    <script src="javascript/londonattraction.js"></script>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav>
+        <div class="logo">
+          <a href="Londonattraction.html">
+          <img src="/Users/arvind/Downloads/logo.jpg"alt ="london-Attarction">
+            <!-- <a href="Londonattraction.html">London Attractions</a> -->
+          </a>
+        </div>
+        <ul>
+            <li><a href="Londonattraction.html">Home</a></li>
+            <li><a href="booking.html">Booking</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="api.html">Weather Check</a></li>
+    
+    
+        </ul>
+       
+        <button id="darkModeToggle">🌙</button>
+        <!-- <button id="weather-btn">Check Weather</button> -->
+
+    </nav>
+
+
+    <header>
+      <div class=" content">
+        <h1> Check Weather</h1>
+        <p>Here you will find realtime information about London.</p>
+    </header>
+
+    <main>
+      <section class="attractions">
+        <div class="Popular-attraction">
+            <h2>Check Weather</h2>
+            <button id="fetchButton">Get Weather Info</button>
+            <div id="result">Result will be displayed here...</div>
+          
+           
+        </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 London Attractions. All rights reserved.</p>
+    </footer>
+
+    <script>
+      const url = 'https://weatherapi-com.p.rapidapi.com/alerts.json?q=london';
+      const options = {
+        method: 'GET',
+        headers: {
+          'x-rapidapi-key': 'a7f4a1b0d3msh24a1b78bfdf0ebap16c263jsnd40db5ee125f',
+          'x-rapidapi-host': 'weatherapi-com.p.rapidapi.com'
+        }
+      };
+  
+      document.getElementById('fetchButton').onclick = async function () {
+        const resultDiv = document.getElementById('result');
+        resultDiv.textContent = 'Fetching data...';
+  
+        try {
+          const response = await fetch(url, options);
+          const data = await response.json();
+  
+          const alerts = data.alerts.alert || [];
+          const londonWarnings = alerts.filter(alert => alert.areas.includes("London"));
+  
+          if (londonWarnings.length > 0) {
+            resultDiv.innerHTML = londonWarnings.map(alert => `
+              <div>
+                <h3>${alert.headline}</h3>
+                <p><strong>Event:</strong> ${alert.event}</p>
+                <p><strong>Severity:</strong> ${alert.severity}</p>
+                <p><strong>Urgency:</strong> ${alert.urgency}</p>
+                <p><strong>Description:</strong> ${alert.desc}</p>
+                <p><strong>Effective:</strong> ${alert.effective}</p>
+                <p><strong>Expires:</strong> ${alert.expires}</p>
+                <p><strong>Instruction:</strong> ${alert.instruction}</p>
+              </div>
+              <hr>
+            `).join('');
+          } else {
+            resultDiv.textContent = 'No weather warnings for London at this time.';
+          }
+        } catch (error) {
+          resultDiv.textContent = `Error: ${error.message}`;
+        }
+      };
+    </script>
+</body>
+</html>
