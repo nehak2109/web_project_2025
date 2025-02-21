@@ -1,0 +1,94 @@
+/* Reset and basic styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+}
+
+header {
+  background-color: #333;
+  color: white;
+  padding: 10px 0;
+}
+
+header .logo a img {
+  width: 150px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 5px 10px;
+  font-size: 1.2rem;
+}
+
+nav a:hover {
+  background-color: #555;
+  border-radius: 5px;
+}
+
+/* Main content styling */
+.hero {
+  text-align: center;
+  padding: 50px;
+  background-color: #222;
+  color: white;
+}
+
+.hero h1 {
+  font-size: 3rem;
+}
+
+.hero p {
+  font-size: 1.5rem;
+  margin-top: 10px;
+}
+
+.intro {
+  padding: 20px;
+  text-align: center;
+}
+
+.intro h2 {
+  margin-bottom: 20px;
+}
+
+.attractions {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.attraction-card {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 250px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.attraction-card img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.attraction-card h3 {
+  margin: 15px 0;
+  font-size: 1.5rem
+}
