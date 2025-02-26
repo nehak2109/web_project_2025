@@ -1,3 +1,33 @@
+
+        /* You can include the relevant styles for the new sections here */
+        .hero {
+            background: url('/path/to/london-skyline.jpg') no-repeat center center;
+            background-size: cover;
+            text-align: center;
+            padding: 100px 20px;
+            color: white;
+        }
+        .cta-button {
+            background-color: #ff6f61;
+            color: white;
+            padding: 15px 30px;
+            font-size: 18px;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+        }
+        .cta-button:hover {
+            background-color: #ff3b2a;
+        }
+        .map, .reviews, .categories, .booking-form, .weather-widget, .newsletter, .social-media {
+            padding: 20px;
+        }
+        /* Add more styles for responsiveness, grids, etc. */
+    /* </style> */
+
+
+
+
 /* .container{
 background-color: aqua;
 height: 1000px;
@@ -28,7 +58,7 @@ grid-template-rows: 50px,50px,50px;
  
 
  html, body {
-  height: 100%;  /* Make sure the body takes up the full height of the page */
+  height: 100%; 
   display: flex;
   flex-direction: column;  /* Stack content vertically */
   margin: 0;
@@ -51,12 +81,13 @@ grid-template-rows: 50px,50px,50px;
   margin: 0;
   padding: 30;
   box-sizing: border-box; 
+  text-align: center;
 }
-.logo{
+/* .logo{
   display: grid;
    height: 8px;
   width: 8px;
-}
+} */
 
 /*  below header */
 /* body {
@@ -66,6 +97,7 @@ grid-template-rows: 50px,50px,50px;
   transition: background-color 0.3s, color 0.3s;
 } */
 /* navigation bar */
+
 nav {
   background-color: white;
   color: #ddd;
@@ -74,21 +106,24 @@ nav {
   top: 0;
   display: flex;
   justify-content: space-between;
-  align-items: left;
+  align-items: center;
   background: linear-gradient(45deg, #ff6f61, #6a5acd, #00bcd4);
   padding: -10px -20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adding shadow */
   z-index: 1000; /* Ensures the navbar stays on top */
 }
+
 h1{
-  background-color:white;
+  /* background-color:white; */
   /* padding: 10px; */
   margin-top: -30px;
-  background: linear-gradient(45deg, white, white, white);
+  background: linear-gradient(45deg, purple, #6a5acd, #00bcd4);
     padding: -10px -20px;
     position: sticky;
-    display:flexbox;
     width: 100%;
+    /* display: flex; */
+  /* justify-content: space-between;
+  align-items: center; */
  
 }
 h2{
@@ -98,9 +133,11 @@ h2{
   margin-bottom: 10px;
   background-color:white;
   text-align: center;
+  
 }
  /* p{
-  background-color:greenyellow;
+  background-color:black;
+  text-decoration-color: white;
 }  */
 
 nav ul {
@@ -166,7 +203,7 @@ section.attractions {
   margin: 10px 0;
   font-size: 1.2rem;
   font-weight: bold;
-  background-color:yellow;
+  background-color:white;
 }
 
 /* Hover effect to scale up the grid items */
@@ -206,11 +243,11 @@ body.dark-mode {
 header {
   background-color: white;
   text-align: center;
-}
+} 
 
 header h1 {
   font-size: 2rem;
-}
+} 
 .Popular-attraction{
  color: forestgreen;
 place-items: center;
@@ -649,3 +686,14 @@ footer {
 #confirmationMessage p {
   font-size: 1.2rem;
 }
+
+        .payment-button {
+            margin-top: 20px;
+            background-color: #FF5722;
+        }
+
+        .payment-button:hover {
+            background-color: #E64A19;
+        }
+
+        

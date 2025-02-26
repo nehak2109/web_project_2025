@@ -11,13 +11,12 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 document.addEventListener('DOMContentLoaded', function() {
-  // Get all the "Book Now" buttons
   const bookNowButtons = document.querySelectorAll('.book-now');
 
-  // // Get the booking form and confirmation message elements
-  // const bookingForm = document.getElementById('bookingForm');
-  // const confirmationMessage = document.getElementById('confirmationMessage');
-  // const attractionNameSpan = document.getElementById('attractionName');
+  //  the booking form and confirmation message elements
+  const bookingForm = document.getElementById('bookingForm'); // Fix: define bookingForm
+  const confirmationMessage = document.getElementById('confirmationMessage'); // Fix: define confirmationMessage
+  const attractionNameSpan = document.getElementById('attractionName'); // Fix: define attractionNameSpan
 
   // Get the form element
   const bookingFormDetails = document.getElementById('bookingFormDetails');
@@ -27,68 +26,114 @@ document.addEventListener('DOMContentLoaded', function() {
       tickets: document.getElementById('tickets')
   };
 
-  // Store selected attraction details
   let selectedAttraction = "";
 
-  // When the "Book Now" button is clicked
   bookNowButtons.forEach(function(button) {
       button.addEventListener('click', function() {
-          // Get the attraction name and price from the button's data attributes
           selectedAttraction = button.getAttribute('data-attraction');
-          
-          // Show the booking form and hide the ticket section
           bookingForm.style.display = 'block';
           document.querySelector('.ticket-price-section').style.display = 'none';
-
-          // Optionally, you can prefill or show the selected attraction in the form
-          // (For now, we'll just use it in the confirmation message later)
       });
   });
 
   // Handle form submission
   bookingFormDetails.addEventListener('submit', function(event) {
-      event.preventDefault(); // Prevent form submission (no server interaction)
+      event.preventDefault(); // Prevent form submission
 
-      // Capture the form data (you can later send it to the server)
       const userName = formInputs.name.value;
       const userEmail = formInputs.email.value;
       const numTickets = formInputs.tickets.value;
 
-      // Hide the booking form and show the confirmation message
       bookingForm.style.display = 'none';
       confirmationMessage.style.display = 'block';
 
-      // Show confirmation message
       attractionNameSpan.textContent = selectedAttraction;
-      // Optionally log the booking details for reference
       console.log(`Booking confirmed for ${userName} (${userEmail}) - ${numTickets} tickets for ${selectedAttraction}`);
   });
 });
 
-// <!-- JavaScript to Handle Form Submission -->
-
+// Form submission
 function submitForm(event) {
   event.preventDefault(); // Prevent the default form submission
   
-  // Get form data
   const name = document.getElementById('name').value;
   const email = document.getElementById('email').value;
   const message = document.getElementById('message').value;
 
-  // Display confirmation message
   document.getElementById('confirmationMessage').style.display = 'block';
-  
-  // Hide the form after submission
   document.getElementById('contactForm').style.display = 'none';
 
-  // Optional: Log form data (for debugging or saving)
   console.log('Name:', name);
   console.log('Email:', email);
   console.log('Message:', message);
-
-  // Optionally send this data to your server for further processing
-  // Example: sendDataToServer(name, email, message);
 }
 
+// Cart update logic
+const cartItems = [];
+const attractionPrices = {
+    "Big Ben": 20,
+    "London Eye": 25,
+    "Buckingham Palace": 18,
+    "Victoria and Albert Museum": 15,
+    "The Shard": 30,
+    "The Tower of London": 22,
+    "Westminster Abbey": 18,
+    "British Museum": 10
+};
 
+// Handle form submission and add to cart
+document.getElementById('booking-form1').addEventListener('submit', function(event) {
+    event.preventDefault();
 
+    const attractionName = document.getElementById('attraction-name').value;
+    const attractionDate = document.getElementById('attraction-date').value;
+    const attractionTime = document.getElementById('attraction-time').value;
+
+    if (attractionName && attractionDate && attractionTime) {
+        const item = {
+            name: attractionName,
+            date: attractionDate,
+            time: attractionTime,
+            price: attractionPrices[attractionName]
+        };
+
+        cartItems.push(item);
+        updateCart();
+        updateCartBadge();
+    } else {
+        alert('Please select attraction, date, and time!');
+    }
+});
+
+// Update cart UI
+function updateCart() {
+    const cartList = document.getElementById('cart-items');
+    cartList.innerHTML = '';
+
+    let total = 0;
+    cartItems.forEach(item => {
+        const li = document.createElement('li');
+        li.textContent = `${item.name} - ${item.date} at ${item.time} | £${item.price}`;
+        cartList.appendChild(li);
+        total += item.price;
+    });
+
+    document.getElementById('cart-total').textContent = `Total: £${total}`;
+}
+
+// Update cart badge
+function updateCartBadge() {
+    const cartBadge = document.getElementById('cart-badge');
+    if (cartBadge) {
+        cartBadge.textContent = cartItems.length;
+    }
+}
+
+// Payment button click handler
+document.getElementById('payment-button').addEventListener('click', function() {
+    if (cartItems.length > 0) {
+        alert('Proceeding to payment...');
+    } else {
+        alert('Your cart is empty. Please add items to the cart before proceeding.');
+    }
+});

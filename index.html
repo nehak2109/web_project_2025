@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>London Attractions</title>
+    <link rel="stylesheet" href="css/londonattraction.css">
+    <script src="javascript/londonattraction.js"></script>
+    </head>
+    <body>
+        <!-- Navbar -->
+        <nav>
+            <div class="logo">
+                <a href="index.html"></a>
+                <img src="/images/logo.jpg" alt="London Attraction">
+            </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="booking.html">Booking</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="api.html">Weather Check</a></li>
+            </ul>
+            <button id="darkModeToggle">🌙</button>
+        </nav>
+    
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <!-- <h1>Welcome to London's Best Attractions</h1>
+                <p>Book your tickets today for an unforgettable adventure!</p> -->
+                <a href="booking.html" class="cta-button">ENQUIRE NOW</a>
+            </div>
+        </section>
+    
+        <main>
+            <!-- Attractions Section -->
+            <section class="attractions">
+                <div class="Popular-attraction">
+                    <h2>Explore the Best of London's Iconic Landmarks</h2>
+                </div>
+                <div class="grid-container">
+                    <!-- Grid Items (Attractions) -->
+                    <div class="grid-item">
+                        <a href="https://tickets.parliament.uk/timeslot/big-ben-tour?outputStyle=Default&pageIndex=1&pageSize=30">
+                            <img src="/images/bigben.jpeg" alt="Big Ben">
+                            <p>Big Ben</p>
+                        </a>
+                    </div>
+                    <div class="grid-item">
+                        <a href="https://www.londoneye.com/tickets-and-prices/">
+                            <img src="/images/londoneye.webp" alt="London Eye">
+                            <p>The London Eye</p>
+                        </a>
+                    </div>
+                    <div class="grid-item">
+                        <a href="https://www.hrp.org.uk/tower-of-london/visit/tickets-and-prices/#gs.jxwvcg">
+                            <img src="/images/tol.jpeg" alt="Tower of London">
+                            <p>Tower of London</p>
+                        </a>
+                    </div>
+                    <div class="grid-item">
+                        <a href="https://www.westminster-abbey.org/visit-us/prices-entry-times/">
+                            <img src="/images/westminister.jpeg" alt="Westminster Abbey">
+                            <p>Westminster Abbey</p>
+                        </a>
+                    </div>
+                </div>
+            </section>
+    
+            <!-- Interactive Map Section -->
+            <section class="map">
+                <h2>Explore Attractions on the Map</h2>
+                <iframe src="https://www.google.com/maps/embed?pb=..." width="50%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </section>
+    
+            <!-- User Reviews Section -->
+            <section class="reviews">
+                <h3>Customer Reviews</h3>
+                <div class="review-item">
+                    <h4>Big Ben</h4>
+                    <div class="rating">⭐⭐⭐⭐⭐</div>
+                    <p>"Incredible view and history. A must-see landmark!"</p>
+                </div>
+                <div class="review-item">
+                    <h4>The London Eye</h4>
+                    <div class="rating">⭐⭐⭐⭐</div>
+                    <p>"Great experience, especially the views from the top!"</p>
+                </div>
+            </section>
+    
+            <!-- Attraction Categories -->
+            <section class="categories">
+                <h2>Explore by Category</h2>
+                <div class="category-tabs">
+                    <button class="tab" onclick="filterAttractions('historic')">Historic</button>
+                    <button class="tab" onclick="filterAttractions('modern')">Modern</button>
+                    <button class="tab" onclick="filterAttractions('museums')">Museums</button>
+                    <button class="tab" onclick="filterAttractions('outdoor')">Outdoor</button>
+                    <button class="tab" onclick="filterAttractions('family')">Family-friendly</button>
+                </div>
+                <div class="attractions-list" id="historic">
+                    <!-- Add historic attraction grid here -->
+                </div>
+            </section>
+    
+            <!-- Booking Form -->
+            <section class="booking-form">
+                <h2>Book Your Tickets</h2>
+                <form id="bookingForm">
+                    <label for="attraction">Select Attraction</label>
+                    <select id="attraction" name="attraction">
+                        <option value="bigben">Big Ben</option>
+                        <option value="londoneye">London Eye</option>
+                        <option value="toweroflondon">Tower of London</option>
+                        <option value="westminsterabbey">Westminster Abbey</option>
+                    </select>
+                    <label for="date">Select Date</label>
+                    <input type="date" id="date" name="date">
+                    <label for="time">Select Time</label>
+                    <input type="time" id="time" name="time">
+                    <label for="tickets">Number of Tickets</label>
+                    <input type="number" id="tickets" name="tickets" min="1" max="10">
+                    <div id="price">Price: £20</div>
+                    <button type="submit">Confirm Booking</button>
+                </form>
+            </section>
+    
+            <!-- Weather Widget -->
+            <section class="weather-widget">
+                <h3>Current Weather in London</h3>
+                <div id="weather"></div>
+                <!-- Add weather API integration here -->
+            </section>
+    
+            <!-- Newsletter Signup -->
+            <section class="newsletter">
+                <h3>Stay Updated with the Latest Offers</h3>
+                <form id="newsletterForm">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </section>
+    
+            <!-- Social Media -->
+            <section class="social-media">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="https://facebook.com" target="_blank">Facebook</a>
+                    <a href="https://instagram.com" target="_blank">Instagram</a>
+                    <a href="https://twitter.com" target="_blank">Twitter</a>
+                </div>
+            </section>
+        </main>
+    
+        <!-- Footer -->
+        <footer>
+            <p>&copy; 2025 London Attractions. All rights reserved.</p>
+        </footer>
+    </body>
+    </html>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
