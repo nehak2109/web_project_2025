@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact - London Attractions</title>
     <link rel="stylesheet" href="css/londonattraction.css">
-    <script src="javascript/londonattraction.js" defer></script> <!-- External JavaScript -->
+    <script src="javascript/londonattraction.js" defer></script>
 </head>
 <body>
 
@@ -27,46 +27,46 @@
   </nav>
 
   <!-- Header Section -->
-  <header>
+  <!-- <header class="contact-header">
     <div class="content">
       <h1>Contact Us</h1>
+      <p>We’re here to help! Feel free to get in touch with any questions.</p>
     </div>
-  </header>
+  </header> -->
 
   <!-- Main Content Section -->
   <main>
-    <section class="attractions">
-      <div class="Popular-attraction">
+    <section class="contact-container">
+      
+      <div class="contact-info">
         <h2>We'd Love to Hear From You!</h2>
-        <p>If you have any questions, feedback, or inquiries about our attractions, feel free to reach out. We are here to assist you!</p>
+        <p>If you have any questions, feedback, or inquiries, feel free to reach out. Our team is here to assist you!</p>
       </div>
 
       <!-- Contact Form -->
-      <form id="contactForm" onsubmit="submitForm(event)">
-        <div>
+      <form id="contactForm" onsubmit="submitForm(event)" class="contact-form">
+        <div class="form-group">
           <label for="name">Full Name:</label>
-          <input type="text" id="name" name="name" required>
+          <input type="text" id="name" name="name" placeholder="Enter your full name" required>
         </div>
         
-        <div>
+        <div class="form-group">
           <label for="email">Email Address:</label>
-          <input type="email" id="email" name="email" required>
+          <input type="email" id="email" name="email" placeholder="Enter your email" required>
         </div>
 
-        <div>
+        <div class="form-group">
           <label for="message">Your Message:</label>
-          <textarea id="message" name="message" required></textarea>
+          <textarea id="message" name="message" placeholder="Write your message here..." required></textarea>
         </div>
 
-        <div>
-          <button type="submit">Submit</button>
-        </div>
+        <button type="submit" class="submit-btn">Send Message</button>
       </form>
 
       <!-- Confirmation Message -->
-      <div id="confirmationMessage" style="display:none; text-align:center;">
+      <div id="confirmationMessage" class="confirmation-message" style="display:none;">
         <h2>Thank you for reaching out!</h2>
-        <p>We have received your message and will get back to you shortly. In the meantime, feel free to explore our attractions!</p>
+        <p>We've received your message and will get back to you soon.</p>
       </div>
 
     </section>
@@ -74,30 +74,46 @@
     <!-- Additional Contact Information -->
     <section class="contact-details">
       <h2>Our Contact Information</h2>
-      <p><strong>Address:</strong> 123 London Road, London, UK</p>
-      <p><strong>Phone:</strong> +44 20 7946 0958</p>
-      <p><strong>Email:</strong> <a href="mailto:support@londonattractions.com">support@londonattractions.com</a></p>
+      <p><strong>📍 Address:</strong> 123 London Road, London, UK</p>
+      <p><strong>📞 Phone:</strong> +44 20 7946 0958</p>
+      <p><strong>📧 Email:</strong> <a href="mailto:support@londonattractions.com">support@londonattractions.com</a></p>
 
       <!-- Embedded Google Map -->
-      <h3>Find Us Here:</h3>
-      <iframe
-        width="600"
-        height="450"
-        style="border:0;"
-        loading="lazy"
-        allowfullscreen
-        referrerpolicy="no-referrer-when-downgrade"
-        src="https://www.google.com/maps/embed/v1/place?q=London&key=YOUR_GOOGLE_MAPS_API_KEY">
-      </iframe>
+      <div class="map-container">
+        <h3>Find Us Here:</h3>
+        <iframe
+          width="100%"
+          height="400"
+          style="border:0;"
+          loading="lazy"
+          allowfullscreen
+          referrerpolicy="no-referrer-when-downgrade"
+          src="https://www.google.com/maps/embed/v1/place?q=London&key=YOUR_GOOGLE_MAPS_API_KEY">
+        </iframe>
+      </div>
     </section>
     
   </main>
 
   <!-- Footer Section -->
   <footer>
-    <p>&copy; 2025 London Attractions. All rights reserved.</p>
+    <div class="footer-content">
+      <p>&copy; 2024 London Attractions. All rights reserved.</p>
+    
+      <div class="footer-links">
+          <a href="#">Privacy Policy</a> | 
+          <a href="#">Terms of Service</a> | 
+          <a href="#">Contact Us</a>
+      </div>
+      
+      <div class="social-icons">
+          <a href="#" aria-label="Facebook">🔵</a>
+          <a href="#" aria-label="Twitter">🔷</a>
+          <a href="#" aria-label="Instagram">📷</a>
+          <a href="#" aria-label="LinkedIn">🔗</a>
+      </div>
+    </div>
   </footer>
 
-  
 </body>
 </html>

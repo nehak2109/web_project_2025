@@ -1,61 +1,60 @@
 
-        /* You can include the relevant styles for the new sections here */
-        .hero {
-            background: url('/path/to/london-skyline.jpg') no-repeat center center;
+        /* .hero {
+            background: url('images/londoneye.webpg') no-repeat center center;
             background-size: cover;
             text-align: center;
             padding: 100px 20px;
             color: white;
-        }
-        .cta-button {
-            background-color: #ff6f61;
-            color: white;
-            padding: 15px 30px;
-            font-size: 18px;
-            text-decoration: none;
-            border-radius: 5px;
-            display: inline-block;
-        }
-        .cta-button:hover {
-            background-color: #ff3b2a;
-        }
-        .map, .reviews, .categories, .booking-form, .weather-widget, .newsletter, .social-media {
-            padding: 20px;
-        }
-        /* Add more styles for responsiveness, grids, etc. */
-    /* </style> */
-
-
-
-
-/* .container{
-background-color: aqua;
-height: 1000px;
-display: grid;
-width: 80%; /* Adjust the container width to 80% of the page width 
-margin: 0 auto; /* Centers the container horizontally 
-padding: 10px; Adds padding inside the container
-/* box-shadow: 0 4px 8px rgba(166, 29, 29, 0.1); Adds a subtle shadow 
-grid-template-columns: 50px,50px,50px;
-grid-template-rows: 50px,50px,50px;
+        } */
+        /* Advanced CTA Button */
+.cta-button {
+  background: linear-gradient(45deg, #FF5733, #C70039); /* Modern Gradient */
+  color: white;
+  padding: 15px 35px;
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 8px;
+  display: inline-block;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
-.header{
-  background-color: blueviolet;
-  width: 1000px;
-  height: 90px;
-  column-gap: 10px;
-  row-gap: 10px;
 
+.cta-button:hover {
+  background: linear-gradient(45deg, #C70039, #900C3F); /* Darker hover effect */
+  transform: scale(1.05);
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
 }
-.Item1{
-  height: 400px;
-  width: 400px;
-  background-color: blue;
 
-} */
- /* Reset default styling */
+/* Section Styling for a More Advanced Look */
+.map, .reviews, .categories, .booking-form, .weather-widget, .newsletter, .social-media {
+  padding: 30px;
+  border-radius: 10px;
+  background: #f9f9f9; /* Light and modern */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+}
 
- 
+.map:hover, .reviews:hover, .categories:hover, .booking-form:hover, 
+.weather-widget:hover, .newsletter:hover, .social-media:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .cta-button {
+      font-size: 16px;
+      padding: 12px 25px;
+  }
+
+  .map, .reviews, .categories, .booking-form, .weather-widget, 
+  .newsletter, .social-media {
+      padding: 20px;
+  }
+}
+
+        
 
  html, body {
   height: 100%; 
@@ -65,17 +64,6 @@ grid-template-rows: 50px,50px,50px;
   flex-direction: column;  /* Stack content vertically */
 }
 
-/* body {
-  display: flex;
-  flex-direction: column;  /* Stack content vertically */
-  /* margin: 0; */
-  /* padding-top: 80px; */
-/* } */ */
-/* .content {
-  flex: 1;  /* This allows the content to grow and push the footer down */
-  /* padding: 20px; */
-/* } */ */
-
 
 * {
   margin: 0;
@@ -83,214 +71,206 @@ grid-template-rows: 50px,50px,50px;
   box-sizing: border-box; 
   text-align: center;
 }
-/* .logo{
-  display: grid;
-   height: 8px;
-  width: 8px;
-} */
 
-/*  below header */
-/* body {
-  font-family: Arial, sans-serif;
-  background-color:red;
-  color:red;
-  transition: background-color 0.3s, color 0.3s;
-} */
+
 /* navigation bar */
 
 nav {
-  background-color: white;
-  color: #ddd;
-  text-align: center;
-  position: sticky;
-  top: 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: linear-gradient(45deg, #ff6f61, #6a5acd, #00bcd4);
-  padding: -10px -20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adding shadow */
-  z-index: 1000; /* Ensures the navbar stays on top */
-}
-
-h1{
-  /* background-color:white; */
-  /* padding: 10px; */
-  margin-top: -30px;
-  background: linear-gradient(45deg, purple, #6a5acd, #00bcd4);
-    padding: -10px -20px;
+    background: linear-gradient(90deg, #00247D, #FFFFFF, gray); /* UK Flag Colors */
+    color: white;
+    text-align: center;
     position: sticky;
-    width: 100%;
-    /* display: flex; */
-  /* justify-content: space-between;
-  align-items: center; */
- 
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px; /* Proper padding */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    margin-top: 20px;
 }
-h2{
-  font-size: large;
-  font-display: bold;
-  padding-top: 10px;
-  margin-bottom: 10px;
-  background-color:white;
-  text-align: center;
-  
-}
- /* p{
-  background-color:black;
-  text-decoration-color: white;
-}  */
 
+/* Logo Styling */
+nav .logo img {
+    height: 50px; /* Adjust logo size */
+    margin-left: 15px;
+}
+
+/* Navigation Links */
 nav ul {
-  list-style: none;
-  display: inline-block;
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
 }
 
 nav ul li {
-  display: inline;
-  margin: 0 15px;
+    display: inline;
 }
-/* navigation bar elemnts */
+
 nav ul li a {
-  color:black;
-  text-decoration: none;
-  font-size: large;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+    padding: 8px 12px;
+    border-radius: 5px;
 }
 
 nav ul li a:hover {
-  text-decoration:underline;
+    background: rgba(255, 255, 255, 0.3); /* Subtle hover effect */
 }
+
+/* Dark Mode Button */
+#darkModeToggle {
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+    padding: 8px 12px;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+    margin-right: 15px;
+}
+
+#darkModeToggle:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+
+
+
 /* Explore london attraction General section styles */
+/* Improved Attractions Section */
 section.attractions {
-  /* padding: 5px; */
-  margin-top: 10px;
+  margin-top: 40px;
   text-align: center;
-  font-style: initial;
-  text-decoration:#ddd;
-  background-color:white;
+  background-color: #f9f9f9; /* Light grey background for better contrast */
+  padding: 40px 20px; /* Add padding for spacing */
+  border-radius: 10px; /* Rounded corners for a softer look */
 }
 
 /* Grid layout for the attractions */
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Dynamic number of columns */
-  gap: 20px; /* Space between grid items */
-  justify-items: center; /* Center content in each grid cell */
-  background-color:white;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Dynamic layout */
+  gap: 25px; /* Increased space between items */
+  justify-items: center;
 }
 
 /* Styles for each grid item */
 .grid-item {
-  border: 2px solid black;
-  border-radius: 8px;
-  overflow: hidden; /* Prevent image overflow */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-  padding: 20px;
-  
-  
+  background: white; /* White background for a clean look */
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Better shadow for depth */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 15px;
+  text-align: center;
 }
 
-/* Style the images to make them fit the container */
+/* Style the images */
 .grid-item img {
   width: 100%;
-  height: 180px;
-  display: flexbox;
-  
+  height: 200px; /* Increase height for better image display */
+  object-fit: cover; /* Ensure images are properly scaled */
+  border-radius: 8px; /* Slightly rounded corners */
 }
 
 /* Style the text under each image */
 .grid-item p {
-  margin: 10px 0;
+  margin: 15px 0;
   font-size: 1.2rem;
   font-weight: bold;
-  background-color:white;
+  color: #333;
 }
 
-/* Hover effect to scale up the grid items */
+/* Hover effect for grid items */
 .grid-item:hover {
-  transform: scale(1.05);
+  transform: scale(1.03);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
-/* Optional: add hover effect to images */
+/* Buttons inside grid */
 .grid-item a {
-  text-decoration: burlywood; /* Remove underline */
-  color: inherit; /* Inherit color from parent */
-   background-color:#ddd;
+  text-decoration: none;
+  display: inline-block;
+  padding: 10px 15px;
+  border-radius: 5px;
+  background-color: white;
+  color: white;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
 }
 
 .grid-item a:hover {
-  color:slateblue; /* Change text color on hover */
+  background-color: gray;
 }
 
+/* Better Buttons */
 button {
-  padding: 1px;
-  background-color:#28a745;
+  padding: 8px 15px;
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: #28a745;
   color: white;
-  border: white;
+  border: none;
+  border-radius: 5px;
   cursor: pointer;
-  
+  transition: background-color 0.3s ease;
 }
 
 button:hover {
-  background-color: #555;
+  background-color: #218838;
 }
 
+/* Dark Mode */
 body.dark-mode {
-  background-color: #333;
+  background-color: #222;
   color: white;
 }
 
-header {
-  background-color: white;
-  text-align: center;
-} 
-
-header h1 {
-  font-size: 2rem;
-} 
-.Popular-attraction{
- color: forestgreen;
-place-items: center;
-
-  
+body.dark-mode .grid-item {
+  background: #444;
+  color: white;
 }
 
-header p {
+body.dark-mode .grid-item a {
+  background-color: #ffcc00;
+  color: black;
+}
+
+body.dark-mode .grid-item a:hover {
+  background-color: #ff9900;
+}
+
+/* Title Styling */
+.Popular-attraction {
+  color: blue;
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+
+/* header p {
   font-size: 1.4rem;
   background-color:white;
   padding: -20px;
   display: grid;
   text-align: center;
   color:#121212;
-}
+} */
 
-.content, .contact-form {
+/* .content, .contact-form {
   padding: 50px;
   text-align: center;
-}
-
-/* .gallery {
-  display:flexbox;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 20px;
-  font: Red;
 } */
 
-/* .gallery img {
-  width: 50%;
-  height: 10px;
-  border-radius: 5px;
-} */
-
-/* footer  
-{
-  background-color:yellow;
-  color: green;
-  text-align: center;
-  padding: 40px 0;
-  
-  display: grid;
-} */
 
 /* Default styles */
 body {
@@ -306,24 +286,6 @@ body.dark-mode {
   background-color: #121212;
   color:white;
 }
-
-/* button {
-  padding: 10px 20px;
-  font-size: 16px;
-  cursor: pointer;
-  border: none;
-  background-color:white;
-  color: white;
-  border-radius: 5px;
-} */
-
-/* button:hover {
-  background-color: red;
-} */
-
-/*about-page-css*/
-
-
 
 /* General Body and Container Styling */
 body {
@@ -343,10 +305,10 @@ body {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-h1, h2 {
+/* h1, h2 {
   color: #333;
   text-align: center;
-}
+} */
 
 /* Form Styling */
 form {
@@ -436,19 +398,6 @@ body {
   background-color: #f4f4f4;
 }
 
-/* Container for the gallery page */
-/* .container {
-  width: 50%;
-  max-width: 100px;
-  margin: 50px auto;
-  padding: 20px;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Dynamic number of columns */
-  /* gap: 20px; Space between grid items */
-  /* justify-items: center; Center content in each grid cell
-  background-color:#ddd;
-} */ 
-
 /* Gallery Header */
 #gallery h1 {
   text-align: center;
@@ -481,13 +430,6 @@ body {
   cursor: pointer;
 }
 
-/* .gallery-item img {
-  width: 50%;
-  height: 100px;
-  display: block;
-  border-radius: 8px;
-  transition: transform 0.3s ease;
-} */
 .gallery-item img {
   width: 30%; /* Make image fill the container */
   height: 200px; /* Set fixed height for consistency */
@@ -541,12 +483,50 @@ body {
 
 /* Footer Styling */
 footer {
-  text-align: center;
-  background-color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #222;
   color: white;
-  padding: 10px 0;
+  padding: 20px;
   margin-top: 40px;
-} 
+  font-size: 14px;
+}
+
+.footer-links {
+  margin: 10px 0;
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 16px;
+  transition: color 0.3s ease-in-out;
+}
+
+.footer-links a:hover {
+  color: #f8b400; /* Highlight color */
+}
+
+.social-icons {
+  margin-top: 10px;
+}
+
+.social-icons a {
+  display: inline-block;
+  margin: 0 10px;
+  font-size: 20px;
+  color: green;
+  transition: transform 0.3s ease-in-out;
+}
+
+.social-icons a:hover {
+  transform: scale(1.2);
+  color: #f8b400;
+}
+
 
 /* Mobile Responsive Styles */
 @media (max-width: 768px)
@@ -695,5 +675,237 @@ footer {
         .payment-button:hover {
             background-color: #E64A19;
         }
+/* Header Styling with UK Flag Theme */
+header {
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.9), rgba(245, 245, 245, 0.8)); /* Subtle gradient */
+  text-align: center;
+  padding: 10px 0; /* Reduced padding */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Softer shadow */
+  color: #333; 
+  font-weight: bold;
+  font-size: 1 rem;
+  border-radius: 0 0 10px 10px; /* Soft curved bottom */
+  position: relative;
+  margin-bottom: 40px; /* Space below header */
+}
+
+/* Remove the underline effect by eliminating header::after */
+header::after {
+  display: none; /* This removes the underline */
+}
+
+h1 {
+  font-size: 1.8rem; /* Adjust size */
+  font-weight: 600; /* Slightly bold but not too heavy */
+  color: #333; /* Dark gray for readability */
+  text-align: center; /* Center alignment */
+  margin-bottom: 10px; /* Space below the heading */
+  letter-spacing: 1px; /* Slightly spaced letters */
+  font-family: 'Poppins', sans-serif; /* Modern font */
+}
+
+/* Optional: Adding a gradient effect */
+h1::after {
+  content: "";
+  display: block;
+  width: 50%;
+  height: 3px;
+  
+  margin: 8px auto 0;
+  border-radius: 2px;
+}
+
+/* Contact Section Styling */
+.contact-container {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 30px;
+  background: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Contact Info */
+.contact-info h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.contact-info p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+/* Contact Form */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 20px;
+}
+
+/* Form Group */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.form-group label {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #444;
+  margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: border 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #0073e6;
+  outline: none;
+}
+
+/* Textarea Styling */
+.form-group textarea {
+  height: 120px;
+  resize: vertical;
+}
+
+/* Submit Button */
+.submit-btn {
+  padding: 12px 20px;
+  font-size: 1rem;
+  background: #0073e6;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.submit-btn:hover {
+  background: #005bb5;
+}
+
+/* Confirmation Message */
+.confirmation-message {
+  margin-top: 20px;
+  padding: 20px;
+  background: #e6f7e6;
+  color: #2d7a2d;
+  border-left: 5px solid #2d7a2d;
+  border-radius: 5px;
+  display: none;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .contact-container {
+      width: 100%;
+      padding: 20px;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+      font-size: 0.9rem;
+  }
+  
+  .submit-btn {
+      font-size: 0.9rem;
+      padding: 10px;
+  }
+}
+
+/* Weather Section Styling */
+.attractions {
+  max-width: 1500px;
+  margin: 50px auto;
+  padding: 30px;
+  background: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Heading */
+.Popular-attraction h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Fetch Button */
+#fetchButton {
+  background: #0073e6;
+  color: white;
+  font-size: 1rem;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+#fetchButton:hover {
+  background: #005bb5;
+  transform: scale(1.05);
+}
+
+#fetchButton:active {
+  background: #004494;
+  transform: scale(0.98);
+}
+
+/* Weather Result Box */
+#result {
+  margin-top: 20px;
+  padding: 15px;
+  font-size: 1.1rem;
+  color: #444;
+  background: #eef4ff;
+  border-left: 5px solid #0073e6;
+  border-radius: 5px;
+  min-height: 50px;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .attractions {
+      width: 90%;
+      padding: 20px;
+  }
+  
+  #fetchButton {
+      font-size: 0.9rem;
+      padding: 10px;
+  }
+  
+  #result {
+      font-size: 1rem;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
 
         

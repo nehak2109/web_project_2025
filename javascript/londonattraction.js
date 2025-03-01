@@ -68,66 +68,8 @@ function submitForm(event) {
   console.log('Message:', message);
 }
 
-// Cart update logic
-const cartItems = [];
-const attractionPrices = {
-    "Big Ben": 20,
-    "London Eye": 25,
-    "Buckingham Palace": 18,
-    "Victoria and Albert Museum": 15,
-    "The Shard": 30,
-    "The Tower of London": 22,
-    "Westminster Abbey": 18,
-    "British Museum": 10
-};
 
-// Handle form submission and add to cart
-document.getElementById('booking-form1').addEventListener('submit', function(event) {
-    event.preventDefault();
 
-    const attractionName = document.getElementById('attraction-name').value;
-    const attractionDate = document.getElementById('attraction-date').value;
-    const attractionTime = document.getElementById('attraction-time').value;
-
-    if (attractionName && attractionDate && attractionTime) {
-        const item = {
-            name: attractionName,
-            date: attractionDate,
-            time: attractionTime,
-            price: attractionPrices[attractionName]
-        };
-
-        cartItems.push(item);
-        updateCart();
-        updateCartBadge();
-    } else {
-        alert('Please select attraction, date, and time!');
-    }
-});
-
-// Update cart UI
-function updateCart() {
-    const cartList = document.getElementById('cart-items');
-    cartList.innerHTML = '';
-
-    let total = 0;
-    cartItems.forEach(item => {
-        const li = document.createElement('li');
-        li.textContent = `${item.name} - ${item.date} at ${item.time} | £${item.price}`;
-        cartList.appendChild(li);
-        total += item.price;
-    });
-
-    document.getElementById('cart-total').textContent = `Total: £${total}`;
-}
-
-// Update cart badge
-function updateCartBadge() {
-    const cartBadge = document.getElementById('cart-badge');
-    if (cartBadge) {
-        cartBadge.textContent = cartItems.length;
-    }
-}
 
 // Payment button click handler
 document.getElementById('payment-button').addEventListener('click', function() {
@@ -137,3 +79,43 @@ document.getElementById('payment-button').addEventListener('click', function() {
         alert('Your cart is empty. Please add items to the cart before proceeding.');
     }
 });
+// Handle Booking Form Submission
+document.getElementById("bookingForm").addEventListener("submit", function(event) {
+  event.preventDefault(); // Prevent page refresh
+  document.getElementById("bookingMessage").style.display = "block"; // Show success message
+});
+
+// Handle Newsletter Form Submission
+document.getElementById("newsletterForm").addEventListener("submit", function(event) {
+  event.preventDefault(); // Prevent page refresh
+  document.getElementById("newsletterMessage").style.display = "block"; // Show success message
+});
+
+// Fetch Weather Data from OpenWeather API
+
+async function fetchWeather() {
+  const apiKey = "73c91d3b8ef14df9d777da27a5f67674";
+  const city = "London";
+  const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
+
+  try {
+      const response = await fetch(url);
+      const data = await response.json();
+      console.log("Weather API Response:", data); // Debugging log
+
+      if (response.ok) {
+          document.getElementById("weather").innerHTML = `
+              <p>🌡 Temperature: ${data.main.temp}°C</p>
+              <p>🌦 Weather: ${data.weather[0].description}</p>
+              <p>💨 Wind Speed: ${data.wind.speed} m/s</p>
+          `;
+      } else {
+          document.getElementById("weather").innerText = `❌ Error: ${data.message}`;
+      }
+  } catch (error) {
+      console.error("Weather API Fetch Error:", error);
+      document.getElementById("weather").innerText = "⚠ Error fetching weather data.";
+  }
+}
+
+fetchWeather();

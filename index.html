@@ -37,7 +37,7 @@
             <!-- Attractions Section -->
             <section class="attractions">
                 <div class="Popular-attraction">
-                    <h2>Explore the Best of London's Iconic Landmarks</h2>
+                    <h2>🔥 Here You Can Get the Best Price Offer! 🔥</h2>
                 </div>
                 <div class="grid-container">
                     <!-- Grid Items (Attractions) -->
@@ -104,7 +104,6 @@
                 </div>
             </section>
     
-            <!-- Booking Form -->
             <section class="booking-form">
                 <h2>Book Your Tickets</h2>
                 <form id="bookingForm">
@@ -116,31 +115,33 @@
                         <option value="westminsterabbey">Westminster Abbey</option>
                     </select>
                     <label for="date">Select Date</label>
-                    <input type="date" id="date" name="date">
+                    <input type="date" id="date" name="date" required>
                     <label for="time">Select Time</label>
-                    <input type="time" id="time" name="time">
+                    <input type="time" id="time" name="time" required>
                     <label for="tickets">Number of Tickets</label>
-                    <input type="number" id="tickets" name="tickets" min="1" max="10">
+                    <input type="number" id="tickets" name="tickets" min="1" max="10" required>
                     <div id="price">Price: £20</div>
                     <button type="submit">Confirm Booking</button>
                 </form>
+                <p id="bookingMessage" style="color: green; display: none;">Booking successful! You will receive a confirmation email.</p>
             </section>
-    
+            
             <!-- Weather Widget -->
             <section class="weather-widget">
                 <h3>Current Weather in London</h3>
-                <div id="weather"></div>
-                <!-- Add weather API integration here -->
+                <div id="weather">Loading weather...</div>
             </section>
-    
+            
             <!-- Newsletter Signup -->
             <section class="newsletter">
                 <h3>Stay Updated with the Latest Offers</h3>
                 <form id="newsletterForm">
-                    <input type="email" placeholder="Enter your email" required>
+                    <input type="email" id="newsletterEmail" placeholder="Enter your email" required>
                     <button type="submit">Subscribe</button>
                 </form>
+                <p id="newsletterMessage" style="color: green; display: none;">Subscription successful! Check your email for updates.</p>
             </section>
+            
     
             <!-- Social Media -->
             <section class="social-media">
@@ -155,8 +156,22 @@
     
         <!-- Footer -->
         <footer>
-            <p>&copy; 2025 London Attractions. All rights reserved.</p>
+            <p>&copy; 2024 London Attractions. All rights reserved.</p>
+            
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a> | 
+                <a href="#">Terms of Service</a> | 
+                <a href="#">Contact Us</a>
+            </div>
+            
+            <div class="social-icons">
+                <a href="#" aria-label="Facebook">🔵</a>
+                <a href="#" aria-label="Twitter">🔷</a>
+                <a href="#" aria-label="Instagram">📷</a>
+                <a href="#" aria-label="LinkedIn">🔗</a>
+            </div>
         </footer>
+        
     </body>
     </html>
  
